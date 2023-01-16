@@ -7,6 +7,7 @@
 特征：
     并不依赖索引，而通过next指针(内存地址寻址)迭代所有数据,一次只取一个值
     而不是一股脑的把所有数据放进内存，大大节省空间
+场景：用在大数据当中，迭代极大量数据
 """
 
 # 1 可迭代对象
@@ -61,7 +62,7 @@ for i in it:
     print(i)
 
 # 判断迭代器
-from collections import Iterable, Iterator
+from collections.abc import Iterable, Iterator
 
 # Iterator 迭代器
 # Iterable 可迭代对象
@@ -80,3 +81,18 @@ print(res)
 
 lst = iter(r)
 # 获取迭代器中的数据 方法一：
+
+print("<==========>")
+print(next(lst))
+print(next(lst))
+print(next(lst))
+
+# 获取迭代器中的数据  方法二：
+print("<==========>")
+for i in range(5):
+    print(next(lst))
+
+# 获取迭代器中的数据 方法三：
+print("<==========>")
+for i in lst:
+    print(i)

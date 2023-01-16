@@ -7,3 +7,4 @@ Python基础
         003:  1.闭包的意义
         004： 1.匿名函数
         005： 1.迭代器
+        006:  1.高阶函数 map reduce sorted filter
