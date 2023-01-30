@@ -1,13 +1,20 @@
 # os 与 shutil 模块
+import os
 # os模块具有 新建/删除
 # os.mknod 创建文件
+# os.mknod("1.txt") # windows 不兼容
 # os.remove 删除文件
-# os.mkdir 创建目录(文件夹)
-# os.rmdir 删除目录(文件夹)
-# os.rename 对文件，目录重命名
-# os.makedirs 递归创建文件夹
-# os.removedirs 递归删除文件夹(空文件夹)
 
+# os.mkdir 创建目录(文件夹)
+os.mkdir('test2.txt')
+# os.rmdir 删除目录(文件夹)
+os.rmdir('test2.txt')
+# os.rename 对文件，目录重命名
+os.rename('lianxi.json','lianxi1.json')
+# os.makedirs 递归创建文件夹
+os.makedirs('a/b/c/d')
+# os.removedirs 递归删除文件夹(空文件夹)
+os.removedirs('a/b/c/d')
 # -- shutil模块 复制/移动/
 # copyfileobj(fsrc,fdst[,length=16*1024]) 复制文件 (length的单位是字符(表达一次读多少个字符))
 # copyfile(src,dst) # 单纯的仅复制文件内容，底层调用了copyfileobj
